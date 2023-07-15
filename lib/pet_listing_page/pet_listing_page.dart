@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,7 @@ class PetListingPage extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(
-                      "icons/moon.svg",
+                       "assets/icons/moon.svg",
                       width: 20,
                       height: 20,
                     ),
@@ -57,7 +58,7 @@ class PetListingPage extends StatelessWidget {
                               ? Color(0xff303030)
                               : Color(0xFFA1A1A1),
                         ),
-                        child: Text("View adopted pets"),
+                        child: const Text("View adopted pets"),
                       ),
                     ),
                   ],
@@ -224,12 +225,11 @@ class PetListingPage extends StatelessWidget {
                             height: 400,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              // image: DecorationImage(
-                              //     fit: BoxFit.cover,
-                              //     image:
-                              //         AssetImage("assets/images/dog/1.jpeg")),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(datum["imgSrc"]),
+                              ),
                             ),
-                            child: Image.asset("assets/images/dog/1.jpeg"),
                           ),
                         ),
                       ),

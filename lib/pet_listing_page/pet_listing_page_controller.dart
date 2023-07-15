@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
@@ -27,7 +26,6 @@ class PetListingPageController extends GetxController {
 
   // false for dark mode true for light mode
   final theme = false.obs;
-
 
   late Box<Pet> petBox;
   final debouncer = Debouncer(milliseconds: 500);
@@ -63,7 +61,7 @@ class PetListingPageController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    makeImageBlur();
+    getDataBasisFilter();
   }
 
   @override
@@ -74,13 +72,12 @@ class PetListingPageController extends GetxController {
   }
 
   void onImageTap(Map<String, dynamic> parameterData) async {
-    const basePath = kDebugMode ? '' : 'assets/';
     Map<String, String> params = {
       "id": parameterData["id"],
       "name": parameterData["name"],
       "age": parameterData["age"],
       "price": parameterData["price"],
-      "imgSrc": basePath + parameterData["imgSrc"],
+      "imgSrc": parameterData["imgSrc"],
     };
 
     final petList = petBox.values.toList();
@@ -112,12 +109,30 @@ class PetListingPageController extends GetxController {
   List<Map<String, dynamic>> getUpdatedList() {
     List<Map<String, dynamic>> list = [];
     if (selectedFilter.value == "dogData") {
-      list.assignAll(dogList);
+      final tempList = getUpdatedListWithAdoptedValue(dogList);
+      list.assignAll(tempList);
     } else if (selectedFilter.value == "catData") {
-      list.assignAll(catList);
+      final tempList = getUpdatedListWithAdoptedValue(catList);
+      list.assignAll(tempList);
     } else {
-      list.addAll(dogList);
-      list.addAll(catList);
+      final tempDogList = getUpdatedListWithAdoptedValue(dogList);
+      final tempCatList = getUpdatedListWithAdoptedValue(catList);
+
+      list.addAll(tempDogList);
+      list.addAll(tempCatList);
+    }
+    return list;
+  }
+
+  List<Map<String, dynamic>> getUpdatedListWithAdoptedValue(
+      List<Map<String, dynamic>> list) {
+    final petList = petBox.values.toList();
+    for (var item in petList) {
+      for (var pet in list) {
+        if (pet['id'] == item.id) {
+          pet['isAdopted'].value = item.isAdopted;
+        }
+      }
     }
     return list;
   }

@@ -64,3 +64,11 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+.flutter-plugins
+.flutter-plugins-dependencies
+package_config_subset
+package_config.json
+version
+web_plugin_registrant.dart
+
