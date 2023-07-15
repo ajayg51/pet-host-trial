@@ -1,16 +1,12 @@
-# pet_adoption_app
+# petAdoptionApp
+A web app to adopt any pet and view history of adopted ones, it remembers which of the pets were adopted across app launches and restricts future adoption.
 
-A new Flutter project.
+## Screenshots
+![petListingPage](./screenshots/petListingPage.png)
+![petDetailsPage](./screenshots/petDetailsPage.png)
+![petZoomInOutPopUp](./screenshots/petZoomInOutPopUp.png)
+![petAfterAdoptedPage](./screenshots/petAfterAdoptedPage.png)
+![petAdoptedHistoryPage](./screenshots/petAdoptedHistoryPage.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
