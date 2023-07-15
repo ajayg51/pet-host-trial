@@ -1,15 +1,17 @@
+```
 # petAdoptionApp
+```
 A web app to adopt any pet and view history of adopted ones, it remembers which of the pets were adopted across app launches and restricts future adoption.
+
+```
+## Click here
 ```
 <p>
   <a href="https://flutter-project-405ca.web.app">Click here</a> to view petAdoptionApp
 </p>
-
-
 ```
-
-
 ## Screenshots
+```
 ![petListingPage](./screenshots/petListingPage.png)
 ![petDetailsPage](./screenshots/petDetailsPage.png)
 ![petZoomInOutPopUp](./screenshots/petZoomInOutPopUp.png)
