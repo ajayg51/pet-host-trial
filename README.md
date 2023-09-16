@@ -15,7 +15,7 @@ Screenshots
 ```
 
 
-![petListingPage](./screenshots/petListingPage.png)
+![petListingPage](screenshots/petAdoptedHistoryPage.png)
 ![petDetailsPage](./screenshots/petDetailsPage.png)
 ![petZoomInOutPopUp](./screenshots/petZoomInOutPopUp.png)
 ![petAfterAdoptedPage](./screenshots/petAfterAdoptedPage.png)
