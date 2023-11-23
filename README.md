@@ -10,9 +10,9 @@ A web app to adopt any pet and view history of adopted ones, it remembers which 
 
 ## Screenshots
 
+![petAfterAdoptedPage](screenshots/petAfterAdoptedPage.png)
 ![petDetailsPage](screenshots/petDetailsPage.png)
 ![petZoomInOutPopUp](screenshots/petZoomInOutPopUp.png)
-![petAfterAdoptedPage](screenshots/petAfterAdoptedPage.png)
 ![petAdoptedHistoryPage](screenshots/petAdoptedHistoryPage.png)
 
 
